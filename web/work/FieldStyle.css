@@ -1,0 +1,31 @@
+html{
+    overflow: hidden;
+}
+
+
+#canvasId {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#field{
+    background: #000000;
+    text-align: center;
+    margin-left: 0;
+}
+
+.info{
+    position: relative;
+    top:-600px;
+    left:370px;
+    font-size: 40px;
+    color: white;
+}
+
+.temp_info{
+    position: relative;
+    top:-800px;
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.85);
+}
