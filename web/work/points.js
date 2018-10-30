@@ -106,10 +106,10 @@ var point = {
         player.score += 1;
         console.log(player.score);
         document.getElementById("info").innerText = player.score.toString();
-        soundPlay('/work/chomp.wav');
+        soundPlay('/work/sound/chomp.wav');
         if (player.score == 244){
-            document.getElementById("temp").innerText = "You won!\nTo play again press key";
-            soundPlay('/work/win.mp3');
+            document.getElementById("temp").innerText = "You've won!\nTo play again press any key";
+            soundPlay('/work/sound/win.mp3');
             player.lives = 3;
             player.score = 0;
             document.getElementById("lives").innerText = "0";

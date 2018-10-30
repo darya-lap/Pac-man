@@ -27,17 +27,6 @@ var partition = {
                 y1++;
             }
         }
-        // var x2 = 0;
-        // var y2 = 0;
-        // for (j=0; j < height/20;j++){
-        //     for (l=0; l < width/20; l++){
-        //         if (grid[j][l] == -1) drawRect(x2*20,y2*20,80,80,'red');
-        //         else drawRect(x2*20,y2*20,80,80,'blue');
-        //         x2++;
-        //     }
-        //     x2 = 0;
-        //     y2++;
-        // }
     },
 
     draw: function () {

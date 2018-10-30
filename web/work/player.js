@@ -7,7 +7,7 @@ var player = {
     move_y: 0,
     radius: 15,
     color:'yellow',
-    speed:2,
+    speed:3,
     xs: [30,70,130,190,250,310,370,430,490,530],
     ys: [30,110,170,230,290,350,410,470,530,590],
     way: 'l',
@@ -201,7 +201,7 @@ var player = {
     collisionGhost: function () {
         if ((isCollision(this.x - 15,this.y - 15,30,30,ghost.x,ghost.y,ghost.width,ghost.height)) || (isCollision(this.x - 15,this.y - 15,30,30,ghost1.x,ghost1.y,ghost1.w,ghost1.h))){
             this.lives--;
-            soundPlay('/work/death.wav');
+            soundPlay('/work/sound/death.wav');
             document.getElementById("lives").innerText = this.lives.toString();
             this.init(280,470,15,'yellow','l');
             isGame = false;
@@ -210,8 +210,8 @@ var player = {
             if (this.lives > 0)
                 document.getElementById("temp").innerText = "Press any key to continue";
             else{
-                document.getElementById("temp").innerText = "You lost\nTo try again press any key";
-                soundPlay('/work/failed.mp3');
+                document.getElementById("temp").innerText = "You've lost\nTo try again press any key";
+                soundPlay('/work/sound/failed.mp3');
                 this.lives = 3;
                 this.score = 0;
                 document.getElementById("lives").innerText = this.lives.toString();
@@ -229,12 +229,4 @@ var player = {
         this.color = color;
         this.way = way;
     }
-    /*init: function (x,y,w,h,color) {
-        this.x = x;
-        this.y = y;
-        this.width = w;
-        this.height = h;
-        this.color = color;
-    }*/
-
 };
